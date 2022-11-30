@@ -1,4 +1,4 @@
-import express from 'express'
+import express, { query } from 'express'
 import pg from "pg";
 // import knexPostgis from 'knex-postgis'
 // import knex from 'knex'
@@ -48,9 +48,10 @@ app.post('/add_elements', (req, res)=>{
                 var phone = "phone" in feature.properties ? feature.properties['phone'] : "mobile  non disponible"
                 var geom = `POINT(${feature.geometry.coordinates[0]} ${feature.geometry.coordinates[1]})`
                 var name = feature.properties.name
-                console.log(typeof(geom))
-                pool.query(`INSERT INTO clinics(name, address, phone, rating, geom) 
-                values('${name}', '${address}', '${phone}', 3, ST_GeomFromText('${geom}', 4326));`)
+                var query_string = `INSERT INTO clinics(name, address, phone, rating, geom) 
+                values('${name}', '${address}', '${phone}', 3, ST_GeomFromText('${geom}', 4326));`
+                console.log(typeof(query_string, query_string))
+                //pool.query()
                 // db('clinics').insert({
                 //     name: unicodeToChar(feature.properties.name) ,
                 //     address: "adresse" in feature.properties ? feature.properties['adresse'] : "addresse non disponible",
