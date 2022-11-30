@@ -28,8 +28,7 @@ app.get('/', (req, res)=>{
 })
 
 app.get('/db', (req, res)=>{
-    
-    console.log(mydb('clinics'))
+    console.log(mydb('clinics').select('*'))
     res.send("workinguh")
 })
 
