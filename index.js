@@ -50,7 +50,7 @@ app.post('/add_elements', (req, res)=>{
                 var name = feature.properties.name
                 console.log(typeof(geom))
                 pool.query(`INSERT INTO clinics(name, address, phone, rating, geom) 
-                values('${name}', '${address}', '${phone}', 3, ST_GeomFromGeoJSON('${geom}'));`)
+                values('${name}', '${address}', '${phone}', 3, ST_GeomFromGeoJSON('${geom}', 4326));`)
                 // db('clinics').insert({
                 //     name: unicodeToChar(feature.properties.name) ,
                 //     address: "adresse" in feature.properties ? feature.properties['adresse'] : "addresse non disponible",
