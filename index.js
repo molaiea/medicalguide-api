@@ -42,12 +42,15 @@ app.post('/delete_all', (req, res)=>{
     pool.query('DELETE FROM clinics WHERE id != -1;')
     pool.query('ALTER SEQUENCE clinics_id_seq RESTART WITH 1')
 })
-app.post('/add_element', (req, res)=>{
+app.post('/add_elements', (req, res)=>{
     myclinics.forEach((feature)=>{
                 var address = "adresse" in feature.properties ? feature.properties['adresse'] : "addresse non disponible"
                 var phone = "phone" in feature.properties ? feature.properties['phone'] : "mobile  non disponible"
+                console.log(address, phone)
                 pool.query(`INSERT INTO clinics(name, address, phone, rating, geom) 
-                values(${feature.properties.name}, ${address}, ${phone}, 3, ST_GeomFromText(ST_AsText(${feature.geometry}), 4326));`)
+                values(${feature.properties.name}, ${address}, ${phone}, 3, ST_GeomFromText(ST_AsText(${feature.geometry}), 4326));`).then(
+                    res.send('done!!')
+                )
                 // db('clinics').insert({
                 //     name: unicodeToChar(feature.properties.name) ,
                 //     address: "adresse" in feature.properties ? feature.properties['adresse'] : "addresse non disponible",
