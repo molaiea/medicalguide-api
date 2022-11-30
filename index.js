@@ -5,31 +5,31 @@ import knex from 'knex'
 import clinics from './DataClinics.json' assert { type: "json" };
 
 
-// const pool = new pg.Pool();
+const pool = new pg.Pool();
 const app = express()
 const port = process.env.PORT || 5000
 
 const myclinics = clinics.features
-const mydb = knex({
-    client:'pg',
-    connection: {
-        host: 'containers-us-west-84.railway.app:6529',
-        user: 'postgres',
-        password: 'BLsWHcahT5ZglrAxHSvH',
-        database: 'railway'
-    }
-});
+// const mydb = knex({
+//     client:'pg',
+//     connection: {
+//         host: 'containers-us-west-84.railway.app:6529',
+//         user: 'postgres',
+//         password: 'BLsWHcahT5ZglrAxHSvH',
+//         database: 'railway'
+//     }
+// });
 
-  const st = knexPostgis(mydb)
+//   const st = knexPostgis(mydb)
   
 app.get('/', (req, res)=>{
     console.log(`${req} is asking for connection`)
     res.send("success")
 })
 
-app.get('/db', (req, res)=>{
-    
-    res.json(mydb('clinics').select('*'))
+app.get('/db', async (req, res)=>{
+    var {result} = await pool.query('SELECT * FROM clinics')
+    res.json(result)
 })
 
 // app.post('/add_element', (req, res)=>{
