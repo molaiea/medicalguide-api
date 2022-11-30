@@ -6,16 +6,15 @@ import clinics from './DataClinics.json' assert { type: "json" };
 
 const connectionString =
   "postgresql://postgres:BLsWHcahT5ZglrAxHSvH@containers-us-west-84.railway.app:6529/railway";
-const pool = new pg.Pool({
-    connectionString,
-});
+// const pool = new pg.Pool({
+//     connectionString,
+// });
 const app = express()
 const port = process.env.PORT || 5000
 const myclinics = clinics.features
 const pg = knex({
     client: 'pg',
     connection: connectionString,
-    searchPath: ['knex', 'public'],
   });
   
 // const mydb = knex({
