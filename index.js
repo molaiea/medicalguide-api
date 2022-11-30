@@ -40,12 +40,12 @@ app.get('/db', async (req, res)=>{
 
 app.post('/delete_all', (req, res)=>{
     pool.query('DELETE FROM clinics WHERE id != -1;')
-    pool.query('ALTER SEQUENCE clinics_id_seq RESTART WITH 1')
+    pool.query('ALTER SEQUENCE clinics_id_seq RESTART WITH 1;')
 })
 
 app.post('/add_elements', (req, res)=>{
     myclinics.forEach((feature)=>{
-                var address = "adresse" in feature.properties ? feature.properties['adresse'].replace("'", "\'") : "addresse non disponible"
+                var address = "adresse" in feature.properties ? feature.properties['adresse'].replace("'", "''") : "addresse non disponible"
                 var phone = "phone" in feature.properties ? feature.properties['phone'] : "mobile  non disponible"
                 var geom = `POINT(${feature.geometry.coordinates[0]} ${feature.geometry.coordinates[1]})`
                 var name = feature.properties.name.replace("'", "\'")
