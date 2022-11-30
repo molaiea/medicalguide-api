@@ -38,9 +38,16 @@ app.get('/db', async (req, res)=>{
     res.json({result})
 })
 
+app.post('delete_all', (req, res)=>{
+    pool.query('DELETE FROM clinics WHERE id != -1;')
+    pool.query('ALTER SEQUENCE clinics_id_seq RESTART WITH 1')
+})
 app.post('/add_element', (req, res)=>{
     myclinics.forEach((feature)=>{
-                pool.query("INSERT INTO clinics(name, address, phone, rating) values('test', 'test', '056685432', 3);")
+                var address = "adresse" in feature.properties ? feature.properties['adresse'] : "addresse non disponible"
+                var phone = "phone" in feature.properties ? feature.properties['phone'] : "mobile  non disponible"
+                pool.query(`INSERT INTO clinics(name, address, phone, rating, geom) 
+                values(${feature.properties.name}, ${address}, ${phone}, 3, ST_GeomFromText(ST_AsText(${feature.geometry}), 4326));`)
                 // db('clinics').insert({
                 //     name: unicodeToChar(feature.properties.name) ,
                 //     address: "adresse" in feature.properties ? feature.properties['adresse'] : "addresse non disponible",
