@@ -12,7 +12,7 @@ const connectionString =
 const app = express()
 const port = process.env.PORT || 5000
 const myclinics = clinics.features
-const pg = knex({
+const mypg = knex({
     client: 'pg',
     connection: connectionString,
   });
@@ -35,7 +35,7 @@ app.get('/', (req, res)=>{
 
 app.get('/db', async (req, res)=>{
     //var result = await pool.query('SELECT * FROM clinics;')
-    res.json(knex('clinics').withSchema('public').select("*"))
+    res.json(mypg('clinics').withSchema('public').select("*"))
 })
 
 // app.post('/add_element', (req, res)=>{
