@@ -48,10 +48,9 @@ app.post('/add_elements', (req, res)=>{
                 var phone = "phone" in feature.properties ? feature.properties['phone'] : "mobile  non disponible"
                 var geom = `POINT(${feature.geometry.coordinates[0]} ${feature.geometry.coordinates[1]})`
                 var name = feature.properties.name
-                var query_string = `INSERT INTO clinics(name, address, phone, rating, geom) 
-                values('${name}', '${address}', '${phone}', 3, ST_GeomFromText('${geom}', 4326));`
+                var query_string = `INSERT INTO clinics(name, address, phone, rating, geom) VALUES('${name}', '${address}', '${phone}', 3, ST_GeomFromText('${geom}', 4326));`
                 console.log(query_string)
-                //pool.query()
+                pool.query(query_string)
                 // db('clinics').insert({
                 //     name: unicodeToChar(feature.properties.name) ,
                 //     address: "adresse" in feature.properties ? feature.properties['adresse'] : "addresse non disponible",
