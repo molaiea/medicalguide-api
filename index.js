@@ -38,20 +38,21 @@ app.get('/db', async (req, res)=>{
     res.json({result})
 })
 
-// app.post('/add_element', (req, res)=>{
-//     myclinics.forEach((feature)=>{
-//                 db('clinics').insert({
-//                     name: unicodeToChar(feature.properties.name) ,
-//                     address: "adresse" in feature.properties ? feature.properties['adresse'] : "addresse non disponible",
-//                     rating: 4,
-//                     geom: st.geomFromText(st.asText(st.geomFromGeoJSON(feature.geometry)), 4326),
-//                     phone: "phone" in feature.properties ? feature.properties['phone'] : "mobile  non disponible"
-//                 }).then(console.log)
+app.post('/add_element', (req, res)=>{
+    myclinics.forEach((feature)=>{
+                pool.query("INSERT INTO clinics(name, address, phone, rating) values('test', 'test', '056685432', 3);")
+                // db('clinics').insert({
+                //     name: unicodeToChar(feature.properties.name) ,
+                //     address: "adresse" in feature.properties ? feature.properties['adresse'] : "addresse non disponible",
+                //     rating: 4,
+                //     geom: st.geomFromText(st.asText(st.geomFromGeoJSON(feature.geometry)), 4326),
+                //     phone: "phone" in feature.properties ? feature.properties['phone'] : "mobile  non disponible"
+                // }).then(console.log)
 
-//     })
+    })
     
-//       res.json("success maybe")
-// })
+      res.json("success maybe")
+})
 app.listen(port, ()=>{
     console.log(`listening on port ${port}`)
 })
