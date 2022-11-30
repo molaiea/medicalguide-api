@@ -11,8 +11,13 @@ const pool = new pg.Pool({
 });
 const app = express()
 const port = process.env.PORT || 5000
-pool.connect()
 const myclinics = clinics.features
+const pg = knex({
+    client: 'pg',
+    connection: connectionString,
+    searchPath: ['knex', 'public'],
+  });
+  
 // const mydb = knex({
 //     client:'pg',
 //     connection: {
@@ -24,15 +29,14 @@ const myclinics = clinics.features
 // });
 
 //   const st = knexPostgis(mydb)
-pool.connect()
 app.get('/', (req, res)=>{
     console.log(`${req} is asking for connection`)
     res.send("success")
 })
 
 app.get('/db', async (req, res)=>{
-    var result = await pool.query('SELECT * FROM clinics;')
-    res.json({result})
+    //var result = await pool.query('SELECT * FROM clinics;')
+    res.json(knex('clinics').withSchema('public').select("*"))
 })
 
 // app.post('/add_element', (req, res)=>{
