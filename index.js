@@ -50,7 +50,7 @@ app.post('/add_elements', (req, res)=>{
                 var name = feature.properties.name
                 var query_string = `INSERT INTO clinics(name, address, phone, rating, geom) 
                 values('${name}', '${address}', '${phone}', 3, ST_GeomFromText('${geom}', 4326));`
-                console.log(typeof(query_string, query_string))
+                console.log(query_string)
                 //pool.query()
                 // db('clinics').insert({
                 //     name: unicodeToChar(feature.properties.name) ,
