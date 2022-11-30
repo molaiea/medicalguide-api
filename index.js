@@ -38,7 +38,7 @@ app.get('/db', async (req, res)=>{
     res.json({result})
 })
 
-app.post('delete_all', (req, res)=>{
+app.post('/delete_all', (req, res)=>{
     pool.query('DELETE FROM clinics WHERE id != -1;')
     pool.query('ALTER SEQUENCE clinics_id_seq RESTART WITH 1')
 })
