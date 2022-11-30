@@ -48,9 +48,7 @@ app.post('/add_elements', (req, res)=>{
                 var phone = "phone" in feature.properties ? feature.properties['phone'] : "mobile  non disponible"
                 console.log(address, phone)
                 pool.query(`INSERT INTO clinics(name, address, phone, rating, geom) 
-                values(${feature.properties.name}, ${address}, ${phone}, 3, ST_GeomFromText(ST_AsText(${feature.geometry}), 4326));`).then(
-                    res.send('done!!')
-                )
+                values(${feature.properties.name}, ${address}, ${phone}, 3, ST_GeomFromText(ST_AsText(${feature.geometry}), 4326));`)
                 // db('clinics').insert({
                 //     name: unicodeToChar(feature.properties.name) ,
                 //     address: "adresse" in feature.properties ? feature.properties['adresse'] : "addresse non disponible",
@@ -60,9 +58,8 @@ app.post('/add_elements', (req, res)=>{
                 // }).then(console.log)
 
     })
-    
-      res.json("success maybe")
-})
+    res.send('done')
+    })
 app.listen(port, ()=>{
     console.log(`listening on port ${port}`)
 })
