@@ -13,9 +13,9 @@ const myclinics = clinics.features
 const mydb = knex({
     client:'pg',
     connection: {
-        host: 'containers-us-west-84.railway.app',
+        host: 'containers-us-west-84.railway.app:6529',
         user: 'postgres',
-        password: '6529',
+        password: 'BLsWHcahT5ZglrAxHSvH',
         database: 'railway'
     }
 });
