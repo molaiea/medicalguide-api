@@ -47,7 +47,7 @@ app.post('/add_elements', (req, res)=>{
                 var address = "adresse" in feature.properties ? feature.properties['adresse'] : "addresse non disponible"
                 var phone = "phone" in feature.properties ? feature.properties['phone'] : "mobile  non disponible"
                 var geom = feature.geometry
-                console.log(geom)
+                console.log(typeof(geom))
                 pool.query(`INSERT INTO clinics(name, address, phone, rating, geom) 
                 values('${feature.properties.name}', '${address}', '${phone}', 3, ST_GeomFromGeoJSON('${geom}'));`)
                 // db('clinics').insert({
