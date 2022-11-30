@@ -5,7 +5,7 @@ import knex from 'knex'
 import clinics from './DataClinics.json' assert { type: "json" };
 
 
-const pool = new pg.Pool();
+// const pool = new pg.Pool();
 const app = express()
 const port = process.env.PORT || 5000
 
@@ -28,6 +28,7 @@ app.get('/', (req, res)=>{
 })
 
 app.get('/db', (req, res)=>{
+    
     console.log(mydb('clinics'))
     res.send("workinguh")
 })
