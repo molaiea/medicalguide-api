@@ -27,9 +27,8 @@ app.get('/', (req, res)=>{
     res.send("success")
 })
 
-app.get('/db', async (req, res)=>{
-    const {rows} = await mydb('clinics').withSchema('public').select('*').where('id', 1)
-    res.send(rows)
+app.get('/db', (req, res)=>{
+    res.send(mydb('clinics').select("*"))
 })
 
 // app.post('/add_element', (req, res)=>{
