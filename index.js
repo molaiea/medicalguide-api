@@ -1,6 +1,7 @@
 import express from 'express'
 import pg from "pg";
 import knexPostgis from 'knex-postgis'
+import knex from 'knex'
 import clinics from './DataClinics.json' assert { type: "json" };
 
 
@@ -9,7 +10,7 @@ const app = express()
 const port = process.env.PORT || 5000
 
 const myclinics = clinics.features
-const mydb = require('knex')({
+const mydb = knex({
     client: 'pg',
     connection: process.env.DATABASE_URL,
     searchPath: ['knex', 'public'],
