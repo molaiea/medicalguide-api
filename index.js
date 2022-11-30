@@ -11,10 +11,15 @@ const port = process.env.PORT || 5000
 
 const myclinics = clinics.features
 const mydb = knex({
-    client: 'pg',
-    connection: process.env.DATABASE_URL,
-    searchPath: ['knex', 'public'],
-  });
+    client:'pg',
+    connection: {
+        host: 'containers-us-west-84.railway.app',
+        user: 'postgres',
+        password: '6529',
+        database: 'railway'
+    }
+});
+
   const st = knexPostgis(mydb)
   
 app.get('/', (req, res)=>{
