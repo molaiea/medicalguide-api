@@ -29,7 +29,7 @@ app.get('/', (req, res)=>{
 
 app.get('/db', async (req, res)=>{
     var {result} = await pool.query('SELECT * FROM clinics')
-    res.json(result)
+    res.send(result)
 })
 
 // app.post('/add_element', (req, res)=>{
