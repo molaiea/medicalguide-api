@@ -20,6 +20,10 @@
   "dependencies": {
     "express": "^4.18.2",
     "knex": "^2.3.0",
-    "knex-postgis": "^0.14.3"
+    "knex-postgis": "^0.14.3",
+    "pg": "^8.8.0"
+  },
+  "devDependencies": {
+    "@types/pg": "^8.6.5"
   }
 }
