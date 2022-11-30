@@ -28,7 +28,8 @@ app.get('/', (req, res)=>{
 })
 
 app.get('/db', (req, res)=>{
-    res.send(mydb('clinics').select("*"))
+    console.log(mydb('clinics').select("*"))
+    res.send("workinguh")
 })
 
 // app.post('/add_element', (req, res)=>{
