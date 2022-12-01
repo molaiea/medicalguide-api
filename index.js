@@ -28,8 +28,13 @@ app.get('/', (req, res)=>{
 })
 
 app.get('/db', async (req, res)=>{
-    var result = await pool.query("SELECT Find_SRID('public', 'clinics', 'geom');")
-    res.json({result})
+    var clinics_res = await pool.query("SELECT * FROM clinics;")
+    var dentists_res = await pool.query("SELECT * FROM dentists;")
+    var opticians_res = await pool.query("SELECT * FROM opticians;")
+    var transfusion_res = await pool.query("SELECT * FROM transfusion;")
+    var pharmacies_res = await pool.query("SELECT * FROM pharmacies;")
+    var laboratories_res = await pool.query("SELECT * FROM laboratories;")
+    res.json({clinics_res, dentists_res, opticians_res, transfusion_res, pharmacies_res, laboratories_res})
 })
 
 app.post('/delete_all', (req, res)=>{
