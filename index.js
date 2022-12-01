@@ -1,8 +1,12 @@
 import express, { query } from 'express'
 import pg from "pg";
-// import knexPostgis from 'knex-postgis'
-// import knex from 'knex'
-import clinics from './DataClinics.json' assert { type: "json" };
+import clinics from './data/clinics.json' assert { type: "json" };
+import dentists from './data/dentists.json' assert { type: "json" };
+import laboratories from './data/laboratories.json' assert { type: "json" };
+import transfusion from './data/transfusion.json' assert { type: "json" };
+import pharmacies from './data/pharmacies.json' assert { type: "json" };
+import opticians from './data/opticiens.json' assert { type: "json" };
+
 
 const connectionString =
   "postgresql://postgres:BLsWHcahT5ZglrAxHSvH@containers-us-west-84.railway.app:6529/railway";
@@ -12,22 +16,12 @@ const pool = new pg.Pool({
 const app = express()
 const port = process.env.PORT || 5000
 const myclinics = clinics.features
-// const mypg = knex({
-//     client: 'pg',
-//     connection: connectionString,
-//   });
-  
-// const mydb = knex({
-//     client:'pg',
-//     connection: {
-//         host: 'containers-us-west-84.railway.app:6529',
-//         user: 'postgres',
-//         password: 'BLsWHcahT5ZglrAxHSvH',
-//         database: 'railway'
-//     }
-// });
+const mydentists = dentists.features
+const myopticians = opticians.features
+const mypharmacies = pharmacies.features
+const mylaboratories = laboratories.features
+const mytranfusion = transfusion.features
 
-//   const st = knexPostgis(mydb)
 app.get('/', (req, res)=>{
     console.log(`${req} is asking for connection`)
     res.send("success")
@@ -43,22 +37,82 @@ app.post('/delete_all', (req, res)=>{
     pool.query('ALTER SEQUENCE clinics_id_seq RESTART WITH 1;')
 })
 
-app.post('/add_elements', (req, res)=>{
+app.post('/add_elements_clinics', (req, res)=>{
     myclinics.forEach((feature)=>{
-                var address = "adresse" in feature.properties ? feature.properties['adresse'].replace("'", "''") : "addresse non disponible"
-                var phone = "phone" in feature.properties ? feature.properties['phone'] : "mobile  non disponible"
-                var geom = `POINT(${feature.geometry.coordinates[0]} ${feature.geometry.coordinates[1]})`
-                var name = feature.properties.name.replace("'", "\'")
-                var query_string = `INSERT INTO clinics(name, address, phone, rating, geom) VALUES('${name}', '${address}', '${phone}', 3, ST_GeomFromText('${geom}', 4326));`
-                console.log(name)
-                pool.query(query_string)
-                // db('clinics').insert({
-                //     name: unicodeToChar(feature.properties.name) ,
-                //     address: "adresse" in feature.properties ? feature.properties['adresse'] : "addresse non disponible",
-                //     rating: 4,
-                //     geom: st.geomFromText(st.asText(st.geomFromGeoJSON(feature.geometry)), 4326),
-                //     phone: "phone" in feature.properties ? feature.properties['phone'] : "mobile  non disponible"
-                // }).then(console.log)
+        var address = ("adresse" in feature.properties && feature.properties['adresse'] != "" && feature.properties['adresse'] != "0") ? feature.properties['adresse'].replace("'", "''") : "adresse non disponible"
+        var phone = ("phone" in feature.properties && feature.properties['phone'] != "") ? feature.properties['phone'] : "mobile non disponible"
+        var geom = `POINT(${feature.geometry.coordinates[0]} ${feature.geometry.coordinates[1]})`
+        var name = feature.properties.name.replace("'", "''")
+        var query_string = `INSERT INTO clinics(name, address, phone, rating, geom) VALUES('${name}', '${address}', '${phone}', 3, ST_GeomFromText('${geom}', 4326));`
+        console.log(name)
+        pool.query(query_string)
+
+    })
+    res.send('done')
+    })
+
+app.post('/add_elements_dentists', (req, res)=>{
+    mydentists.forEach((feature)=>{
+        var address = ("adresse" in feature.properties && feature.properties['adresse'] != "" && feature.properties['adresse'] != "0") ? feature.properties['adresse'].replace("'", "''") : "addresse non disponible"
+        var phone = "phone" in feature.properties ? feature.properties['phone'] : "mobile  non disponible"
+        var geom = `POINT(${feature.geometry.coordinates[0]} ${feature.geometry.coordinates[1]})`
+        var name = feature.properties.name.replace("'", "''")
+        var query_string = `INSERT INTO dentists(name, address, phone, rating, geom) VALUES('${name}', '${address}', '${phone}', 3, ST_GeomFromText('${geom}', 4326));`
+        console.log(name)
+        pool.query(query_string)
+
+    })
+    res.send('done')
+    })
+
+app.post('/add_elements_pharmacies', (req, res)=>{
+    mypharmacies.forEach((feature)=>{
+        var address = ("adresse" in feature.properties && feature.properties['adresse'] != "" && feature.properties['adresse'] != "0") ? feature.properties['adresse'].replace("'", "''") : "addresse non disponible"
+        var phone = "phone" in feature.properties ? feature.properties['phone'] : "mobile  non disponible"
+        var geom = `POINT(${feature.geometry.coordinates[0]} ${feature.geometry.coordinates[1]})`
+        var name = feature.properties.name.replace("'", "''")
+        var query_string = `INSERT INTO pharmacies(name, address, phone, rating, geom) VALUES('${name}', '${address}', '${phone}', 3, ST_GeomFromText('${geom}', 4326));`
+        console.log(name)
+        pool.query(query_string)
+
+    })
+    res.send('done')
+    })
+app.post('/add_elements_transfusion', (req, res)=>{
+    mytranfusion.forEach((feature)=>{
+        var address = ("adresse" in feature.properties && feature.properties['adresse'] != "" && feature.properties['adresse'] != "0") ? feature.properties['adresse'].replace("'", "''") : "addresse non disponible"
+        var phone = "phone" in feature.properties ? feature.properties['phone'] : "mobile  non disponible"
+        var geom = `POINT(${feature.geometry.coordinates[0]} ${feature.geometry.coordinates[1]})`
+        var name = feature.properties.name.replace("'", "''")
+        var query_string = `INSERT INTO transfusion(name, address, phone, rating, geom) VALUES('${name}', '${address}', '${phone}', 3, ST_GeomFromText('${geom}', 4326));`
+        console.log(name)
+        pool.query(query_string)
+
+    })
+    res.send('done')
+    })
+app.post('/add_elements_opticians', (req, res)=>{
+    myopticians.forEach((feature)=>{
+        var address = ("adresse" in feature.properties && feature.properties['adresse'] != "" && feature.properties['adresse'] != "0") ? feature.properties['adresse'].replace("'", "''") : "addresse non disponible"
+        var phone = "phone" in feature.properties ? feature.properties['phone'] : "mobile  non disponible"
+        var geom = `POINT(${feature.geometry.coordinates[0]} ${feature.geometry.coordinates[1]})`
+        var name = feature.properties.name.replace("'", "''")
+        var query_string = `INSERT INTO opticians(name, address, phone, rating, geom) VALUES('${name}', '${address}', '${phone}', 3, ST_GeomFromText('${geom}', 4326));`
+        console.log(name)
+        pool.query(query_string)
+
+    })
+    res.send('done')
+    })
+app.post('/add_elements_laboratories', (req, res)=>{
+    mylaboratories.forEach((feature)=>{
+        var address = ("adresse" in feature.properties && feature.properties['adresse'] != "" && feature.properties['adresse'] != "0") ? feature.properties['adresse'].replace("'", "''") : "addresse non disponible"
+        var phone = "phone" in feature.properties ? feature.properties['phone'] : "mobile  non disponible"
+        var geom = `POINT(${feature.geometry.coordinates[0]} ${feature.geometry.coordinates[1]})`
+        var name = feature.properties.name.replace("'", "''")
+        var query_string = `INSERT INTO laboratories(name, address, phone, rating, geom) VALUES('${name}', '${address}', '${phone}', 3, ST_GeomFromText('${geom}', 4326));`
+        console.log(name)
+        pool.query(query_string)
 
     })
     res.send('done')

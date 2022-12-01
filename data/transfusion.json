@@ -1,0 +1,10 @@
+{
+"type": "FeatureCollection",
+"name": "DataTransfusion",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "building": "yes", "healthcare": "blood_donation", "name": "Centre de Transfusion Sanguine", "name:en": "Blood Center (Tahakoun A Dam)", "name:fr": "Centre de Transfusion Sanguine", "office": "government" }, "geometry": { "type": "Point", "coordinates": [ -6.861975733421805, 33.998495189198728 ] } },
+{ "type": "Feature", "properties": { "building": "yes", "healthcare": "blood_donation", "name": "Centre de Transfusion Sanguine", "name:en": "Blood Center (Tahakoun A Dam)", "name:fr": "Centre de Transfusion Sanguine", "office": "government" }, "geometry": { "type": "Point", "coordinates": [ -6.861975733421805, 33.998495189198728 ] } },
+{ "type": "Feature", "properties": { "building": "hospital", "name": "المركز الجهوي لتحاقن الدم الرباط", "name:fr": "Centre régional de transfusion sanguine Rabat", "name:ar": "المركز الجهوي لتحاقن الدم الرباط" }, "geometry": { "type": "Point", "coordinates": [ -6.858545967349245, 33.98731085637025 ] } }
+]
+}
