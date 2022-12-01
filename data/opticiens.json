@@ -40,32 +40,6 @@
         "geometry": {
             "type": "Point",
             "coordinates": [
-                -6.8442292,
-                34.0202396
-            ]
-        },
-        "properties": {
-            "shop": "optician"
-        }
-    },
-    {
-        "type": "Feature",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [
-                -6.8470246,
-                34.000163
-            ]
-        },
-        "properties": {
-            "shop": "optician"
-        }
-    },
-    {
-        "type": "Feature",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [
                 -6.8305889,
                 34.0206268
             ]
@@ -100,19 +74,6 @@
         },
         "properties": {
             "name": "Rabat Optique",
-            "shop": "optician"
-        }
-    },
-    {
-        "type": "Feature",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [
-                -6.830991,
-                34.018663
-            ]
-        },
-        "properties": {
             "shop": "optician"
         }
     },
@@ -210,7 +171,7 @@
             ]
         },
         "properties": {
-            "name:en": "Look Optic",
+            "name": "Look Optic",
             "shop": "optician"
         }
     },
@@ -363,19 +324,6 @@
             "stroller": "yes",
             "website": "https://www.facebook.com/Alainafflelourabat",
             "wheelchair": "yes"
-        }
-    },
-    {
-        "type": "Feature",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [
-                -6.8419705,
-                34.0204337
-            ]
-        },
-        "properties": {
-            "shop": "optician"
         }
     },
     {
