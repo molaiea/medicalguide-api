@@ -1,5 +1,6 @@
 import express, { query } from 'express'
 import pg from "pg";
+import cors from 'cors';
 import clinics from './data/clinics.json' assert { type: "json" };
 import dentists from './data/dentists.json' assert { type: "json" };
 import laboratories from './data/laboratories.json' assert { type: "json" };
@@ -7,13 +8,13 @@ import transfusion from './data/transfusion.json' assert { type: "json" };
 import pharmacies from './data/pharmacies.json' assert { type: "json" };
 import opticians from './data/opticiens.json' assert { type: "json" };
 
-
 const connectionString =
   "postgresql://postgres:BLsWHcahT5ZglrAxHSvH@containers-us-west-84.railway.app:6529/railway";
 const pool = new pg.Pool({
     connectionString,
 });
 const app = express()
+app.use(cors())
 const port = process.env.PORT || 5000
 const myclinics = clinics.features
 const mydentists = dentists.features
