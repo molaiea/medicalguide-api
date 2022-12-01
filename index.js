@@ -28,12 +28,12 @@ app.get('/', (req, res)=>{
 })
 
 app.get('/db', async (req, res)=>{
-    var clinics_res = await pool.query("SELECT * FROM clinics;")
-    var dentists_res = await pool.query("SELECT * FROM dentists;")
-    var opticians_res = await pool.query("SELECT * FROM opticians;")
-    var transfusion_res = await pool.query("SELECT * FROM transfusion;")
-    var pharmacies_res = await pool.query("SELECT * FROM pharmacies;")
-    var laboratories_res = await pool.query("SELECT * FROM laboratories;")
+    var clinics_res = await (await pool.query("SELECT * FROM clinics;")).rows
+    var dentists_res = await (await pool.query("SELECT * FROM dentists;")).rows
+    var opticians_res = await (await pool.query("SELECT * FROM opticians;")).rows
+    var transfusion_res = await (await pool.query("SELECT * FROM transfusion;")).rows
+    var pharmacies_res = await (await pool.query("SELECT * FROM pharmacies;")).rows
+    var laboratories_res = await (await pool.query("SELECT * FROM laboratories;")).rows
     res.json({clinics_res, dentists_res, opticians_res, transfusion_res, pharmacies_res, laboratories_res})
 })
 
