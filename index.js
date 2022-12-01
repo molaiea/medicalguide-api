@@ -29,12 +29,12 @@ app.get('/', (req, res)=>{
 })
 
 app.get('/db', async (req, res)=>{
-    var clinics_res = await (await pool.query("SELECT id, name, address, phone, rating, st_x(geom) as x, st_y(geom) as y FROM clinics;")).rows
-    var dentists_res = await (await pool.query("SELECT id, name, address, phone, rating, st_x(geom) as x, st_y(geom) as y FROM dentists;")).rows
-    var opticians_res = await (await pool.query("SELECT id, name, address, phone, rating, st_x(geom) as x, st_y(geom) as y FROM opticians;")).rows
-    var transfusion_res = await (await pool.query("SELECT id, name, address, phone, rating, st_x(geom) as x, st_y(geom) as y FROM transfusion;")).rows
-    var pharmacies_res = await (await pool.query("SELECT id, name, address, phone, rating, st_x(geom) as x, st_y(geom) as y FROM pharmacies;")).rows
-    var laboratories_res = await (await pool.query("SELECT id, name, address, phone, rating, st_x(geom) as x, st_y(geom) as y FROM laboratories;")).rows
+    var clinics_res = await (await pool.query("SELECT id, name, address, phone, rating, st_x(geom) as lng, st_y(geom) as lat FROM clinics;")).rows
+    var dentists_res = await (await pool.query("SELECT id, name, address, phone, rating, st_x(geom) as lng, st_y(geom) as lat FROM dentists;")).rows
+    var opticians_res = await (await pool.query("SELECT id, name, address, phone, rating, st_x(geom) as lng, st_y(geom) as lat FROM opticians;")).rows
+    var transfusion_res = await (await pool.query("SELECT id, name, address, phone, rating, st_x(geom) as lng, st_y(geom) as lat FROM transfusion;")).rows
+    var pharmacies_res = await (await pool.query("SELECT id, name, address, phone, rating, st_x(geom) as lng, st_y(geom) as lat FROM pharmacies;")).rows
+    var laboratories_res = await (await pool.query("SELECT id, name, address, phone, rating, st_x(geom) as lng, st_y(geom) as lat FROM laboratories;")).rows
     res.json({clinics_res, dentists_res, opticians_res, transfusion_res, pharmacies_res, laboratories_res})
 })
 
