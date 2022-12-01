@@ -53,8 +53,8 @@ app.post('/add_elements_clinics', (req, res)=>{
 
 app.post('/add_elements_dentists', (req, res)=>{
     mydentists.forEach((feature)=>{
-        var address = ("adresse" in feature.properties && feature.properties['adresse'] != "" && feature.properties['adresse'] != "0") ? feature.properties['adresse'].replace("'", "''") : "addresse non disponible"
-        var phone = "phone" in feature.properties ? feature.properties['phone'] : "mobile  non disponible"
+        var address = ("adresse" in feature.properties && feature.properties['adresse'] != "" && feature.properties['adresse'] != "0") ? feature.properties['adresse'].replace("'", "''") : "adresse non disponible"
+        var phone = ("phone" in feature.properties && feature.properties['phone'] != "") ? feature.properties['phone'] : "mobile  non disponible"
         var geom = `POINT(${feature.geometry.coordinates[0]} ${feature.geometry.coordinates[1]})`
         var name = feature.properties.name.replace("'", "''")
         var query_string = `INSERT INTO dentists(name, address, phone, rating, geom) VALUES('${name}', '${address}', '${phone}', 3, ST_GeomFromText('${geom}', 4326));`
@@ -67,8 +67,8 @@ app.post('/add_elements_dentists', (req, res)=>{
 
 app.post('/add_elements_pharmacies', (req, res)=>{
     mypharmacies.forEach((feature)=>{
-        var address = ("adresse" in feature.properties && feature.properties['adresse'] != "" && feature.properties['adresse'] != "0") ? feature.properties['adresse'].replace("'", "''") : "addresse non disponible"
-        var phone = "phone" in feature.properties ? feature.properties['phone'] : "mobile  non disponible"
+        var address = ("adresse" in feature.properties && feature.properties['adresse'] != "" && feature.properties['adresse'] != "0") ? feature.properties['adresse'].replace("'", "''") : "adresse non disponible"
+        var phone = ("phone" in feature.properties && feature.properties['phone'] != "") ? feature.properties['phone'] : "mobile  non disponible"
         var geom = `POINT(${feature.geometry.coordinates[0]} ${feature.geometry.coordinates[1]})`
         var name = feature.properties.name.replace("'", "''")
         var query_string = `INSERT INTO pharmacies(name, address, phone, rating, geom) VALUES('${name}', '${address}', '${phone}', 3, ST_GeomFromText('${geom}', 4326));`
@@ -80,8 +80,8 @@ app.post('/add_elements_pharmacies', (req, res)=>{
     })
 app.post('/add_elements_transfusion', (req, res)=>{
     mytranfusion.forEach((feature)=>{
-        var address = ("adresse" in feature.properties && feature.properties['adresse'] != "" && feature.properties['adresse'] != "0") ? feature.properties['adresse'].replace("'", "''") : "addresse non disponible"
-        var phone = "phone" in feature.properties ? feature.properties['phone'] : "mobile  non disponible"
+        var address = ("adresse" in feature.properties && feature.properties['adresse'] != "" && feature.properties['adresse'] != "0") ? feature.properties['adresse'].replace("'", "''") : "adresse non disponible"
+        var phone = ("phone" in feature.properties && feature.properties['phone'] != "") ? feature.properties['phone'] : "mobile  non disponible"
         var geom = `POINT(${feature.geometry.coordinates[0]} ${feature.geometry.coordinates[1]})`
         var name = feature.properties.name.replace("'", "''")
         var query_string = `INSERT INTO transfusion(name, address, phone, rating, geom) VALUES('${name}', '${address}', '${phone}', 3, ST_GeomFromText('${geom}', 4326));`
@@ -93,8 +93,8 @@ app.post('/add_elements_transfusion', (req, res)=>{
     })
 app.post('/add_elements_opticians', (req, res)=>{
     myopticians.forEach((feature)=>{
-        var address = ("adresse" in feature.properties && feature.properties['adresse'] != "" && feature.properties['adresse'] != "0") ? feature.properties['adresse'].replace("'", "''") : "addresse non disponible"
-        var phone = "phone" in feature.properties ? feature.properties['phone'] : "mobile  non disponible"
+        var address = ("adresse" in feature.properties && feature.properties['adresse'] != "" && feature.properties['adresse'] != "0") ? feature.properties['adresse'].replace("'", "''") : "adresse non disponible"
+        var phone = ("phone" in feature.properties && feature.properties['phone'] != "") ? feature.properties['phone'] : "mobile  non disponible"
         var geom = `POINT(${feature.geometry.coordinates[0]} ${feature.geometry.coordinates[1]})`
         var name = feature.properties.name.replace("'", "''")
         var query_string = `INSERT INTO opticians(name, address, phone, rating, geom) VALUES('${name}', '${address}', '${phone}', 3, ST_GeomFromText('${geom}', 4326));`
@@ -106,8 +106,8 @@ app.post('/add_elements_opticians', (req, res)=>{
     })
 app.post('/add_elements_laboratories', (req, res)=>{
     mylaboratories.forEach((feature)=>{
-        var address = ("adresse" in feature.properties && feature.properties['adresse'] != "" && feature.properties['adresse'] != "0") ? feature.properties['adresse'].replace("'", "''") : "addresse non disponible"
-        var phone = "phone" in feature.properties ? feature.properties['phone'] : "mobile  non disponible"
+        var address = ("adresse" in feature.properties && feature.properties['adresse'] != "" && feature.properties['adresse'] != "0") ? feature.properties['adresse'].replace("'", "''") : "adresse non disponible"
+        var phone = ("phone" in feature.properties && feature.properties['phone'] != "") ? feature.properties['phone'] : "mobile  non disponible"
         var geom = `POINT(${feature.geometry.coordinates[0]} ${feature.geometry.coordinates[1]})`
         var name = feature.properties.name.replace("'", "''")
         var query_string = `INSERT INTO laboratories(name, address, phone, rating, geom) VALUES('${name}', '${address}', '${phone}', 3, ST_GeomFromText('${geom}', 4326));`
