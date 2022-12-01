@@ -29,12 +29,12 @@ app.get('/', (req, res)=>{
 })
 
 app.get('/db', async (req, res)=>{
-    var clinics_res = await (await pool.query("SELECT id, name, address, phone, rating, st_astext(geom) FROM clinics;")).rows
-    var dentists_res = await (await pool.query("SELECT id, name, address, phone, rating, st_astext(geom) FROM dentists;")).rows
-    var opticians_res = await (await pool.query("SELECT id, name, address, phone, rating, st_astext(geom) FROM opticians;")).rows
-    var transfusion_res = await (await pool.query("SELECT id, name, address, phone, rating, st_astext(geom) FROM transfusion;")).rows
-    var pharmacies_res = await (await pool.query("SELECT id, name, address, phone, rating, st_astext(geom) FROM pharmacies;")).rows
-    var laboratories_res = await (await pool.query("SELECT id, name, address, phone, rating, st_astext(geom) FROM laboratories;")).rows
+    var clinics_res = await (await pool.query("SELECT id, name, address, phone, rating, st_astext(geom) as geometry FROM clinics;")).rows
+    var dentists_res = await (await pool.query("SELECT id, name, address, phone, rating, st_astext(geom) as geometry FROM dentists;")).rows
+    var opticians_res = await (await pool.query("SELECT id, name, address, phone, rating, st_astext(geom) as geometry FROM opticians;")).rows
+    var transfusion_res = await (await pool.query("SELECT id, name, address, phone, rating, st_astext(geom) as geometry FROM transfusion;")).rows
+    var pharmacies_res = await (await pool.query("SELECT id, name, address, phone, rating, st_astext(geom) as geometry FROM pharmacies;")).rows
+    var laboratories_res = await (await pool.query("SELECT id, name, address, phone, rating, st_astext(geom) as geometry FROM laboratories;")).rows
     res.json({clinics_res, dentists_res, opticians_res, transfusion_res, pharmacies_res, laboratories_res})
 })
 
