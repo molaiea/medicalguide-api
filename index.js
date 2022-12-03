@@ -46,7 +46,7 @@ app.get('/api/get/search',async (req, res) => {
                 WHERE name ILIKE $1`,
       [ `%${search_query}%` ]).then(res=>{return res.rows})
       //get labos
-      var laboratories = await pool.query(`SELECT id, name, address, phone, rating, st_x(geom) as lng, st_y(geom) as lat FROM laboratories
+      var labos = await pool.query(`SELECT id, name, address, phone, rating, st_x(geom) as lng, st_y(geom) as lat FROM laboratories
                 WHERE name ILIKE $1`,
       [ `%${search_query}%` ]).then(res=>{return res.rows})
       //get transfusion
@@ -54,7 +54,7 @@ app.get('/api/get/search',async (req, res) => {
                 WHERE name ILIKE $1`,
       [ `%${search_query}%` ]).then(res=>{return res.rows})
 
-    res.send({clinics, dentists, opticians, transfusion, pharmacies, laboratories})
+    res.send({clinics, dentists, opticians, transfusion, pharmacies, labos})
     } catch (error) {
         console.log(error)
     }
