@@ -28,7 +28,11 @@ app.get('/api/get/searchpost',async (req, res) => {
     const searchres = await pool.query(`SELECT * FROM clinics
                 WHERE name ILIKE $1`,
       [ `%${search_query}%` ])
-      res.json(searchres.rows)
+    const mydata = []
+    searchres.rows.forEach(row => {
+        mydata.push({data: row, icon: 'clinics'})
+    })
+      res.send(mydata)
   });
 
 
