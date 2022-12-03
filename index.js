@@ -25,7 +25,7 @@ const mytranfusion = transfusion.features
 
 app.get('/api/get/searchpost',async (req, res) => {
     const {search_query} = req.query;
-    const searchres = await pool.query(`SELECT * FROM clinics
+    const searchres = await pool.query(`SELECT id, name, address, phone, rating, st_x(geom) as lng, st_y(geom) as lat FROM clinics
                 WHERE name ILIKE $1`,
       [ `%${search_query}%` ])
       res.json(searchres.rows)
