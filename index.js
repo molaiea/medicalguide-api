@@ -22,13 +22,43 @@ const myopticians = opticians.features
 const mypharmacies = pharmacies.features
 const mylaboratories = laboratories.features
 const mytranfusion = transfusion.features
+var search_result = []
 
-app.get('/api/get/searchpost',async (req, res) => {
+app.get('/api/get/search',async (req, res) => {
     const {search_query} = req.query;
-    const searchres = await pool.query(`SELECT id, name, address, phone, rating, st_x(geom) as lng, st_y(geom) as lat FROM clinics
+    const tables = ['clinics', 'dentists', 'opticians', 'transfusion', 'pharmacies', 'laboratories']
+    try {
+        
+        // get clinics
+        var clinics = await pool.query(`SELECT id, name, address, phone, rating, st_x(geom) as lng, st_y(geom) as lat FROM clinics
                 WHERE name ILIKE $1`,
-      [ `%${search_query}%` ])
-      res.json(searchres.rows)
+      [ `%${search_query}%` ]).then(res=>{return res.rows})
+        // get pharmacies
+        var pharmacies = await pool.query(`SELECT id, name, address, phone, rating, st_x(geom) as lng, st_y(geom) as lat FROM pharmacies
+                WHERE name ILIKE $1`,
+      [ `%${search_query}%` ]).then(res=>{return res.rows})
+         // get dentists
+      var dentists = await pool.query(`SELECT id, name, address, phone, rating, st_x(geom) as lng, st_y(geom) as lat FROM dentists
+                WHERE name ILIKE $1`,
+      [ `%${search_query}%` ]).then(res=>{return res.rows})
+      //get opticians
+      var opticians = await pool.query(`SELECT id, name, address, phone, rating, st_x(geom) as lng, st_y(geom) as lat FROM opticians
+                WHERE name ILIKE $1`,
+      [ `%${search_query}%` ]).then(res=>{return res.rows})
+      //get labos
+      var laboratories = await pool.query(`SELECT id, name, address, phone, rating, st_x(geom) as lng, st_y(geom) as lat FROM laboratories
+                WHERE name ILIKE $1`,
+      [ `%${search_query}%` ]).then(res=>{return res.rows})
+      //get transfusion
+      var transfusion = await pool.query(`SELECT id, name, address, phone, rating, st_x(geom) as lng, st_y(geom) as lat FROM transfusion
+                WHERE name ILIKE $1`,
+      [ `%${search_query}%` ]).then(res=>{return res.rows})
+
+    res.send({clinics, dentists, opticians, transfusion, pharmacies, laboratories})
+    } catch (error) {
+        console.log(error)
+    }
+    
   });
 
 
