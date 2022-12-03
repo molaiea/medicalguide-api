@@ -23,6 +23,15 @@ const mypharmacies = pharmacies.features
 const mylaboratories = laboratories.features
 const mytranfusion = transfusion.features
 
+app.get('/api/get/searchpost',async (req, res) => {
+    const {search_query} = req.query;
+    const searchres = await pool.query(`SELECT * FROM clinics
+                WHERE name ILIKE $1`,
+      [ `%${search_query}%` ])
+      res.json(searchres.rows)
+  });
+
+
 app.get('/', (req, res)=>{
     console.log(`${req} is asking for connection`)
     res.send("success")
