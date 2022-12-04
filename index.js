@@ -24,6 +24,19 @@ const mylaboratories = laboratories.features
 const mytranfusion = transfusion.features
 var search_result = []
 
+app.get('/api/get/searchbyfilter',async (req, res) => {
+    const {search_query, table} = req.query;
+    try{
+        var tableres = await pool.query(`SELECT id, name, address, phone, rating, st_x(geom) as lng, st_y(geom) as lat FROM ${table}
+                    WHERE name ILIKE $1`,[ `%${search_query}%` ]).then(res=>{return res.rows})
+    }catch{
+
+    }
+    res.json(tableres)
+    
+  });
+
+
 app.get('/api/get/search',async (req, res) => {
     const {search_query} = req.query;
     const tables = ['clinics', 'dentists', 'opticians', 'transfusion', 'pharmacies', 'laboratories']
