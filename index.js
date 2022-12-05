@@ -26,6 +26,7 @@ var search_result = []
 
 app.get('/api/get/searchbyfilter',async (req, res) => {
     const {search_query, table} = req.query;
+    console.log(table)
     try{
         var tableres = await pool.query(`SELECT id, name, address, phone, rating, st_x(geom) as lng, st_y(geom) as lat FROM ${table}
                     WHERE name ILIKE $1`,[ `%${search_query}%` ]).then(res=>{return res.rows})
@@ -36,7 +37,12 @@ app.get('/api/get/searchbyfilter',async (req, res) => {
     
   });
 
-
+app.get('/api/get/searchbybuffer',async (req, res)=>{
+    const {buffer, table, center} = req.query;
+    var geomc = `POINT(${center.split(',')[0]} ${center.split(',')[1]})`
+    await pool.query(`SELECT id, name, address, phone, rating, st_x(geom) as lng, st_y(geom) as lat FROM ${table} where 
+    ST_DWithin(ST_GeomFromText('${geomc}', 4326), geom,${buffer})`).then(resp=>res.send(resp.rows))
+})
 app.get('/api/get/search',async (req, res) => {
     const {search_query} = req.query;
     const tables = ['clinics', 'dentists', 'opticians', 'transfusion', 'pharmacies', 'laboratories']
