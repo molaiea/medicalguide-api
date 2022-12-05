@@ -8,8 +8,7 @@ import transfusion from './data/transfusion.json' assert { type: "json" };
 import pharmacies from './data/pharmacies.json' assert { type: "json" };
 import opticians from './data/opticiens.json' assert { type: "json" };
 
-const connectionString =
-  "postgresql://postgres:BLsWHcahT5ZglrAxHSvH@containers-us-west-84.railway.app:6529/railway";
+const connectionString = process.env.DATABASE_URL
 const pool = new pg.Pool({
     connectionString,
 });
