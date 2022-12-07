@@ -8,7 +8,7 @@ import transfusion from './data2/transfusion2.json' assert { type: "json" };
 import pharmacies from './data2/pharmacies2.json' assert { type: "json" };
 import opticians from './data2/opticiens2.json' assert { type: "json" };
 
-const connectionString = process.env.DATABASE_URL
+const connectionString = 'postgresql://postgres:BLsWHcahT5ZglrAxHSvH@containers-us-west-84.railway.app:6529/railway'
 const pool = new pg.Pool({
     connectionString,
 });
@@ -28,8 +28,7 @@ app.post('/addRating', async (req, res)=>{
     const nb_rates = await pool.query(`SELECT nb_rates FROM ${table} WHERE id = ${id}`).then((res) => {return res.rows})
     const exRating = await pool.query(`SELECT rating FROM ${table} WHERE id = ${id}`).then((res) => {return res.rows})
     const newRating = (exRating[0].rating+rating)/(nb_rates[0].nb_rates+1)
-    console.log(nb_rates)
-    await pool.query(`UPDATE ${table} SET rating = ${newRating}, nb_rating = ${nb_rates[0].nb_rates+1} WHERE id = ${id}`).then(() => res.send('done'))
+    await pool.query(`UPDATE ${table} SET rating = ${newRating}, nb_rates = ${nb_rates[0].nb_rates+1} WHERE id = ${id}`).then(() => res.send('done'))
 })
 app.get("/get_table", async (req, res)=>{
     const {table} = req.query
