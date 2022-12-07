@@ -26,9 +26,11 @@ var search_result = []
 app.post('/addRating', async (req, res)=>{
     const {rating, table, id} = req.query
     console.log(rating, table, id)
-    const nb_rates = await pool.query(`SELECT nb_rates FROM ${table} WHERE id = ${id}`).then((res) => {return res.rows})
+    const nb_rates = await pool.query(`SELECT nb_rates FROM ${table} WHERE id = ${id}`).then((res) => {return res.rows[0].nb_rates})
+    const exRating = await pool.query(`SELECT rating FROM ${table} WHERE id = ${id}`).then((res) => {return res.rows[0].rating})
+    const newRating = (exRating+rating)/(nb_rates+1)
     console.log(nb_rates)
-    await pool.query(`UPDATE ${table} SET rating = ${rating} WHERE id = ${id}`).then(() => res.send('done'))
+    await pool.query(`UPDATE ${table} SET rating = ${rating}, nb_rating = ${nb_rates+1} WHERE id = ${id}`).then(() => res.send('done'))
 })
 app.get("/get_table", async (req, res)=>{
     const {table} = req.query
