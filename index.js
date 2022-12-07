@@ -28,7 +28,10 @@ app.post('/addRating', async (req, res)=>{
     console.log(rating, table, id)
     await pool.query(`UPDATE ${table} SET rating = ${rating} WHERE id = ${id}`).then(() => res.send('done'))
 })
-
+app.get("/get_table", async (req, res)=>{
+    const {table} = req.query
+    await pool.query(`SELECT * FROM ${table};`).then(result=>res.send(result.rows))
+})
 app.get('/api/get/searchbyfilter',async (req, res) => {
     const {search_query, table} = req.query;
     console.log(table)
