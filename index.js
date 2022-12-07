@@ -26,7 +26,7 @@ var search_result = []
 app.post('/addRating', async (req, res)=>{
     const {rating, table, id} = req.query
     console.log(rating, table, id)
-    await pool.query(`UPDATE ${table} SET rating = ${rating} WHERE id = ${id}`)
+    await pool.query(`UPDATE ${table} SET rating = ${rating} WHERE id = ${id}`).then(() => res.send('done'))
 })
 
 app.get('/api/get/searchbyfilter',async (req, res) => {
