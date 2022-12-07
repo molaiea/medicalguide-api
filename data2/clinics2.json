@@ -1,0 +1,795 @@
+{
+    "type": "FeatureCollection",
+    "name": "DataClinics",
+    "crs": {
+        "type": "name",
+        "properties": {
+            "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+        }
+    },
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "amenity": "hospital",
+                "name": "Clinique Belvedere Centre De Cardiologie",
+                "healthcare": "hospital",
+                "healthca_1": "cardiology",
+                "addr_cit_1": "0",
+                "addr_hou_1": "0",
+                "addr_pos_1": "0",
+                "public_t_2": "0",
+                "public_t_3": "0",
+                "healthca_2": "0",
+                "name_fr_1": "0",
+                "name_ar_1": "0",
+                "opening__2": "0",
+                "name_en_1": "0",
+                "building_1": "0",
+                "opening__3": "0"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -6.841612692400886,
+                    34.010747947636325
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "amenity": "clinic",
+                "name": "Clinique Atlas",
+                "adresse": "Rue Houssali",
+                "building": "commercial",
+                "source": "knowledge",
+                "addr_cit_1": "0",
+                "addr_hou_1": "0",
+                "addr_pos_1": "0",
+                "public_t_2": "0",
+                "public_t_3": "0",
+                "healthca_2": "0",
+                "name_fr_1": "0",
+                "name_ar_1": "0",
+                "opening__2": "0",
+                "name_en_1": "0",
+                "building_1": "0",
+                "opening__3": "0"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -6.841554257823076,
+                    34.013667300941734
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "amenity": "clinic",
+                "name": "Clinique des orangers",
+                "building": "yes",
+                "name_fr": "Clinique des orangers",
+                "addr_cit_1": "0",
+                "addr_hou_1": "0",
+                "addr_pos_1": "0",
+                "public_t_2": "0",
+                "public_t_3": "0",
+                "healthca_2": "0",
+                "name_fr_1": "0",
+                "name_ar_1": "0",
+                "opening__2": "0",
+                "name_en_1": "0",
+                "building_1": "0",
+                "opening__3": "0"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -6.842261105426471,
+                    34.017415557901344
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "amenity": "hospital",
+                "name": "Clinique El Amal",
+                "building": "yes",
+                "addr_cit_1": "0",
+                "addr_hou_1": "0",
+                "addr_pos_1": "0",
+                "public_t_2": "0",
+                "public_t_3": "0",
+                "healthca_2": "0",
+                "name_fr_1": "0",
+                "name_ar_1": "0",
+                "opening__2": "0",
+                "name_en_1": "0",
+                "building_1": "0",
+                "opening__3": "0"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -6.822618181439349,
+                    34.013034360939038
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "amenity": "hospital",
+                "name": "Clinique Benjelloum",
+                "healthcare": "hospital",
+                "addr_cit_1": "0",
+                "addr_hou_1": "0",
+                "addr_pos_1": "0",
+                "public_t_2": "0",
+                "public_t_3": "0",
+                "healthca_2": "0",
+                "name_fr_1": "0",
+                "name_ar_1": "0",
+                "opening__2": "0",
+                "name_en_1": "0",
+                "building_1": "0",
+                "opening__3": "0"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -6.8238999,
+                    34.01517035
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "amenity": "hospital",
+                "name": "Clinique Agdal",
+                "adresse": "Avenue Ibn Sina",
+                "healthcare": "hospital",
+                "building": "yes",
+                "emergency": "yes",
+                "addr_cit_1": "0",
+                "addr_hou_1": "0",
+                "addr_pos_1": "0",
+                "public_t_2": "0",
+                "public_t_3": "0",
+                "healthca_2": "0",
+                "name_fr_1": "0",
+                "name_ar_1": "0",
+                "opening__2": "0",
+                "name_en_1": "0",
+                "building_1": "0",
+                "opening__3": "0"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -6.85106393300978,
+                    33.995695641314036
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "amenity": "clinic",
+                "name": "Clinique Beauséjour",
+                "phone": "+212 5377-81313",
+                "building": "yes",
+                "addr_cit_1": "0",
+                "addr_hou_1": "0",
+                "addr_pos_1": "0",
+                "public_t_2": "0",
+                "public_t_3": "0",
+                "healthca_2": "0",
+                "name_fr_1": "0",
+                "name_ar_1": "0",
+                "opening__2": "0",
+                "name_en_1": "0",
+                "building_1": "0",
+                "opening__3": "0"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -6.824437710401929,
+                    34.032475607495122
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "amenity": "clinic",
+                "name": "Clinique De La Vision de Rabat",
+                "phone": "+212 537 676666",
+                "building": "yes",
+                "addr_cit_1": "0",
+                "addr_hou_1": "0",
+                "addr_pos_1": "0",
+                "public_t_2": "0",
+                "public_t_3": "0",
+                "healthca_2": "0",
+                "name_fr_1": "0",
+                "name_ar_1": "0",
+                "opening__2": "0",
+                "name_en_1": "0",
+                "building_1": "0",
+                "opening__3": "0"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -6.84421234428795,
+                    34.007289241207644
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "amenity": "clinic",
+                "name": "Clinique Ibn Khaldoun ",
+                "adresse": "Avenue Ibn Khaldoun ",
+                "addr_city": "Rabat",
+                "addr_house": "32",
+                "addr_postc": "10090",
+                "phone": "+212 537 776767",
+                "healthca_1": "surgery;general;cardiology",
+                "building": "yes",
+                "name_fr": "Clinique Ibn Khaldoun",
+                "name_ar": "???? ??? ?????",
+                "opening_ho": "open",
+                "addr_cit_1": "0",
+                "addr_hou_1": "0",
+                "addr_pos_1": "0",
+                "public_t_2": "0",
+                "public_t_3": "0",
+                "healthca_2": "0",
+                "name_fr_1": "0",
+                "name_ar_1": "0",
+                "opening__2": "0",
+                "name_en_1": "0",
+                "building_1": "0",
+                "opening__3": "0"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -6.84424221266041,
+                    34.006766846641533
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "amenity": "hospital",
+                "name": "Clinique des Nations Unies",
+                "addr_cit_1": "0",
+                "addr_hou_1": "0",
+                "addr_pos_1": "0",
+                "public_t_2": "0",
+                "public_t_3": "0",
+                "healthca_2": "0",
+                "name_fr_1": "0",
+                "name_ar_1": "0",
+                "opening__2": "0",
+                "name_en_1": "0",
+                "building_1": "0",
+                "opening__3": "0"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -6.849076934980267,
+                    33.989355021909638
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "amenity": "clinic",
+                "name": "Clinique Pasteur",
+                "healthcare": "clinic",
+                "building": "yes",
+                "addr_cit_1": "0",
+                "addr_hou_1": "0",
+                "addr_pos_1": "0",
+                "public_t_2": "0",
+                "public_t_3": "0",
+                "healthca_2": "0",
+                "name_fr_1": "0",
+                "name_ar_1": "0",
+                "opening__2": "0",
+                "name_en_1": "0",
+                "building_1": "0",
+                "opening__3": "0"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -6.86628566681609,
+                    33.946503280390317
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "amenity": "clinic",
+                "name": "Top Medical",
+                "adresse": "Rue Tissa",
+                "building": "commercial",
+                "source": "Kaart Ground Survey",
+                "addr_cit_1": "0",
+                "addr_hou_1": "0",
+                "addr_pos_1": "0",
+                "public_t_2": "0",
+                "public_t_3": "0",
+                "healthca_2": "0",
+                "name_fr_1": "0",
+                "name_ar_1": "0",
+                "opening__2": "0",
+                "name_en_1": "0",
+                "building_1": "0",
+                "opening__3": "0"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -6.832689107967163,
+                    34.015813346725288
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "amenity": "clinic",
+                "name": "Red Med",
+                "building": "commercial",
+                "source": "Kaart Ground Survey",
+                "addr_cit_1": "0",
+                "addr_hou_1": "0",
+                "addr_pos_1": "0",
+                "public_t_2": "0",
+                "public_t_3": "0",
+                "healthca_2": "0",
+                "name_fr_1": "0",
+                "name_ar_1": "0",
+                "opening__2": "0",
+                "name_en_1": "0",
+                "building_1": "0",
+                "opening__3": "0"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -6.84687685,
+                    33.97088725
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "amenity": "clinic",
+                "name": "Cabinet Medical",
+                "adresse": "Avenue Assalam",
+                "building": "yes",
+                "source": "Kaart Ground Survey 2018",
+                "building_l": "4",
+                "addr_cit_1": "0",
+                "addr_hou_1": "0",
+                "addr_pos_1": "0",
+                "public_t_2": "0",
+                "public_t_3": "0",
+                "healthca_2": "0",
+                "name_fr_1": "0",
+                "name_ar_1": "0",
+                "opening__2": "0",
+                "name_en_1": "0",
+                "building_1": "0",
+                "opening__3": "0"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -6.78922395,
+                    34.0505248
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "amenity": "clinic",
+                "name": "Ibn Rochd",
+                "phone": "+212537670304",
+                "building": "yes",
+                "addr_cit_1": "0",
+                "addr_hou_1": "0",
+                "addr_pos_1": "0",
+                "public_t_2": "0",
+                "public_t_3": "0",
+                "healthca_2": "0",
+                "name_fr_1": "0",
+                "name_ar_1": "0",
+                "opening__2": "0",
+                "name_en_1": "0",
+                "building_1": "0",
+                "opening__3": "0"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -6.853302532206786,
+                    33.988215165198419
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "amenity": "clinic",
+                "name": "Polyclinique Internationale de Rabat",
+                "addr_city": "0",
+                "addr_house": "0",
+                "addr_postc": "0",
+                "public_tra": "0",
+                "public_t_1": "0",
+                "healthca_1": "0",
+                "name_fr": "0",
+                "name_ar": "0",
+                "opening_ho": "0",
+                "name_en": "0",
+                "building_l": "0",
+                "opening__1": "0"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -6.8230042,
+                    34.0207477
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "amenity": "clinic",
+                "name": "Clinique La Ménara",
+                "addr_city": "0",
+                "addr_house": "0",
+                "addr_postc": "0",
+                "public_tra": "0",
+                "public_t_1": "0",
+                "healthca_1": "0",
+                "name_fr": "0",
+                "name_ar": "0",
+                "opening_ho": "0",
+                "name_en": "0",
+                "building_l": "0",
+                "opening__1": "0"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -6.8312596,
+                    34.0143538
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "amenity": "clinic",
+                "name": "Clinique Souissi",
+                "addr_city": "0",
+                "addr_house": "0",
+                "addr_postc": "0",
+                "public_tra": "0",
+                "public_t_1": "0",
+                "healthca_1": "0",
+                "name_fr": "0",
+                "name_ar": "0",
+                "opening_ho": "0",
+                "name_en": "0",
+                "building_l": "0",
+                "opening__1": "0"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -6.835629,
+                    33.9766467
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "amenity": "clinic",
+                "name": "Clinique des Ambassadeurs",
+                "addr_city": "0",
+                "addr_house": "0",
+                "addr_postc": "0",
+                "public_tra": "0",
+                "public_t_1": "0",
+                "healthca_1": "0",
+                "name_fr": "0",
+                "name_ar": "0",
+                "opening_ho": "0",
+                "name_en": "0",
+                "building_l": "0",
+                "opening__1": "0"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -6.8226646,
+                    33.9618647
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "amenity": "clinic",
+                "name": "Clinique du Bouregreg",
+                "adresse": "Rue Taza",
+                "addr_city": "0",
+                "addr_house": "0",
+                "addr_postc": "0",
+                "public_tra": "0",
+                "public_t_1": "0",
+                "healthca_1": "0",
+                "name_fr": "0",
+                "name_ar": "0",
+                "opening_ho": "0",
+                "name_en": "0",
+                "building_l": "0",
+                "opening__1": "0"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -6.8234519,
+                    34.0209439
+                ]
+            }
+        },
+        
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Clinique Ibn Sina",
+                "addr_city": "0",
+                "addr_house": "0",
+                "addr_postc": "0",
+                "operator": "ALSA Citybus RST",
+                "bus": "yes",
+                "highway": "bus_stop",
+                "network": "ALSA Citybus RST",
+                "public_tra": "0",
+                "public_t_1": "0",
+                "shelter": "yes",
+                "healthca_1": "0",
+                "name_fr": "0",
+                "name_ar": "0",
+                "opening_ho": "0",
+                "name_en": "0",
+                "building_l": "0",
+                "opening__1": "0",
+                "public_t_2": "platform",
+                "public_t_3": "2"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -6.8550572,
+                    33.9887116
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "amenity": "clinic",
+                "name": "Clinique du Chellah",
+                "adresse": "Rue d'Annaba",
+                "addr_city": "0",
+                "addr_house": "0",
+                "addr_postc": "0",
+                "public_tra": "0",
+                "public_t_1": "0",
+                "healthca_1": "0",
+                "name_fr": "0",
+                "name_ar": "0",
+                "opening_ho": "0",
+                "name_en": "0",
+                "building_l": "0",
+                "opening__1": "0"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -6.829677,
+                    34.016585
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "amenity": "clinic",
+                "name": "D'ophtamologie Dc Rafi",
+                "addr_city": "0",
+                "addr_house": "0",
+                "addr_postc": "0",
+                "public_tra": "0",
+                "public_t_1": "0",
+                "healthca_1": "0",
+                "name_fr": "0",
+                "name_ar": "0",
+                "opening_ho": "0",
+                "name_en": "0",
+                "building_l": "0",
+                "opening__1": "0"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -6.8273553,
+                    34.0159318
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "amenity": "clinic",
+                "name": "Dc Khachani",
+                "addr_city": "0",
+                "addr_house": "0",
+                "addr_postc": "0",
+                "public_tra": "0",
+                "public_t_1": "0",
+                "healthca_1": "0",
+                "name_fr": "0",
+                "name_ar": "0",
+                "opening_ho": "0",
+                "name_en": "0",
+                "building_l": "0",
+                "opening__1": "0"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -6.8271189,
+                    34.0156518
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "amenity": "clinic",
+                "name": "Centre de Pédiatrie",
+                "addr_city": "0",
+                "addr_house": "0",
+                "addr_postc": "0",
+                "public_tra": "0",
+                "public_t_1": "0",
+                "healthca_1": "0",
+                "name_fr": "0",
+                "name_ar": "0",
+                "opening_ho": "0",
+                "name_en": "0",
+                "building_l": "0",
+                "opening__1": "0"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -6.8229674,
+                    34.0211375
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "amenity": "clinic",
+                "name": "Centre Ibtissam",
+                "adresse": "Rue Zagora Hassan",
+                "addr_city": "0",
+                "addr_house": "0",
+                "addr_postc": "0",
+                "public_tra": "0",
+                "public_t_1": "0",
+                "healthca_1": "0",
+                "source": "Kaart Ground Survey",
+                "name_fr": "0",
+                "name_ar": "0",
+                "opening_ho": "0",
+                "name_en": "0",
+                "building_l": "0",
+                "opening__1": "0"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -6.8242519,
+                    34.0205982
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "amenity": "clinic",
+                "name": "Cabinet Medicale",
+                "adresse": "Avenue Sidi Mohammed Ben Abdellah",
+                "addr_city": "0",
+                "addr_house": "0",
+                "addr_postc": "0",
+                "public_tra": "0",
+                "public_t_1": "0",
+                "healthca_1": "0",
+                "source": "Kaart Ground Survey",
+                "name_fr": "0",
+                "name_ar": "0",
+                "opening_ho": "0",
+                "name_en": "0",
+                "building_l": "0",
+                "opening__1": "0"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -6.8596651,
+                    34.0103968
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "amenity": "clinic",
+                "name": "Cabinet De Pédiatrie",
+                "adresse": "Rue Oued Baht",
+                "addr_city": "0",
+                "addr_house": "0",
+                "addr_postc": "0",
+                "public_tra": "0",
+                "public_t_1": "0",
+                "healthca_1": "0",
+                "source": "Kaart Ground Survey",
+                "name_fr": "0",
+                "name_ar": "0",
+                "opening_ho": "0",
+                "name_en": "0",
+                "building_l": "0",
+                "opening__1": "0"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -6.8471438,
+                    34.000426
+                ]
+            }
+        }
+    ]
+}

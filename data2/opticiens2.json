@@ -1,0 +1,343 @@
+{"type":"FeatureCollection","name":"opticiens","features":[
+    {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                -6.9328664,
+                33.9245085
+            ]
+        },
+        "properties": {
+            "addr:city": "Temara",
+            "addr:housenumber": "3",
+            "addr:postcode": "12000",
+            "adresse": "Rue Ataat",
+            "alt_name": "expert optique",
+            "designation": "opticien",
+            "dispensing": "yes",
+            "name": "Expert Optique",
+            "shop": "optician",
+            "website": "https://www.facebook.com/expertoptique.ma/"
+        }
+    },
+    {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                -6.8274403,
+                34.0202394
+            ]
+        },
+        "properties": {
+            "name": "C\u00f4t\u00e9 Optique",
+            "shop": "optician"
+        }
+    },
+    {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                -6.8305889,
+                34.0206268
+            ]
+        },
+        "properties": {
+            "name": "Vunette",
+            "shop": "optician"
+        }
+    },
+    {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                -6.8497965,
+                34.0173404
+            ]
+        },
+        "properties": {
+            "name": "Boute Optic",
+            "shop": "optician"
+        }
+    },
+    {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                -6.8345937,
+                34.0177086
+            ]
+        },
+        "properties": {
+            "name": "Rabat Optique",
+            "shop": "optician"
+        }
+    },
+    {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                -6.8482435,
+                34.0202638
+            ]
+        },
+        "properties": {
+            "name": "Optic El Hamd",
+            "name:fr": "Optic El Hamd",
+            "shop": "optician"
+        }
+    },
+    {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                -6.8468412,
+                34.0219942
+            ]
+        },
+        "properties": {
+            "name": "Eye Boutique",
+            "name:fr": "Eye Boutique",
+            "shop": "optician"
+        }
+    },
+    {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                -6.8497286,
+                34.0198113
+            ]
+        },
+        "properties": {
+            "name": "Espace Optique",
+            "name:fr": "Espace Optique",
+            "shop": "optician"
+        }
+    },
+    {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                -6.8286905,
+                34.0170882
+            ]
+        },
+        "properties": {
+            "addr:housenumber": "4",
+            "addr:postcode": "10020",
+            "adresse": "Rue Annaba",
+            "email": "optiquelacapitale@yahoo.fr",
+            "internet_access": "wlan",
+            "name": "optique la capitale \u0628\u0635\u0631\u064a\u0627\u062a \u0627\u0644\u0639\u0627\u0635\u0645\u0629",
+            "name:ar": "\u0628\u0635\u0631\u064a\u0627\u062a \u0627\u0644\u0639\u0627\u0635\u0645\u0629",
+            "name:fr": "optique la capitale",
+            "opening_hours": "Mo-Fr 09:30-19:00; Sa 09:00-14:00",
+            "phone": "+212537204820",
+            "shop": "optician",
+            "website": "https://optique-la-capitale.business.site/"
+        }
+    },
+    {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                -6.8465026,
+                34.0231246
+            ]
+        },
+        "properties": {
+            "name": "Look Optic",
+            "name:en": "Look Optic",
+            "shop": "optician"
+        }
+    },
+    {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                -6.8320222,
+                34.0178604
+            ]
+        },
+        "properties": {
+            "adresse": "Rue Abou Inane",
+            "name": "Grande Optique",
+            "shop": "optician",
+            "source": "Kaart Ground Survey"
+        }
+    },
+    {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                -6.8505657,
+                34.0168422
+            ]
+        },
+        "properties": {
+            "adresse": "Rue Al Hind",
+            "name": "Dinia Optique",
+            "shop": "optician",
+            "source": "Kaart Ground Survey"
+        }
+    },
+    {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                -6.8504906,
+                34.0152959
+            ]
+        },
+        "properties": {
+            "adresse": "Avenue Madagascar",
+            "name": "Ere Optique",
+            "shop": "optician",
+            "source": "Kaart Ground Survey"
+        }
+    },
+    {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                -6.8507011,
+                34.0145289
+            ]
+        },
+        "properties": {
+            "adresse": "Avenue Madagascar",
+            "name": "Med Optic",
+            "shop": "optician",
+            "source": "Kaart Ground Survey"
+        }
+    },
+    {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                -6.8253315,
+                34.020581
+            ]
+        },
+        "properties": {
+            "adresse": "Avenue Al Alaouiyine",
+            "name": "Optic Benyass",
+            "shop": "optician",
+            "source": "Kaart Ground Survey"
+        }
+    },
+    {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                -6.84958,
+                33.9955311
+            ]
+        },
+        "properties": {
+            "adresse": "Avenue Atlas",
+            "name": "Cabinet d'Ophtalmologie Atlas",
+            "shop": "optician",
+            "source": "Kaart Ground Survey 2018"
+        }
+    },
+    {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                -6.8488774,
+                33.997657
+            ]
+        },
+        "properties": {
+            "addr:city": "Rabat \u2d54\u2d31\u2d30\u2d5f \u0627\u0644\u0631\u0628\u0627\u0637",
+            "adresse": "Avenue Fal Ould Oumeir \u0634\u0627\u0631\u0639 \u0641\u0627\u0644 \u0648\u0644\u062f \u0639\u0645\u064a\u0631",
+            "air_conditioning": "yes",
+            "brand": "Alain Afflelou",
+            "level": "0",
+            "name": "Alain Afflelou Agdal",
+            "opening_hours": "Mo-Sa 09:00-20:00",
+            "operator": "Alain Afflelou",
+            "payment:cash": "yes",
+            "payment:credit_cards": "yes",
+            "payment:mastercard": "yes",
+            "payment:visa": "yes",
+            "shop": "optician",
+            "website": "https://www.facebook.com/Alainafflelourabat/",
+            "wheelchair": "yes"
+        }
+    },
+    {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                -6.8456534,
+                34.0033279
+            ]
+        },
+        "properties": {
+            "addr:city": "Rabat \u2d54\u2d31\u2d30\u2d5f \u0627\u0644\u0631\u0628\u0627\u0637",
+            "adresse": "Avenue Omar Ibn Khattab \u0634\u0627\u0631\u0639 \u0639\u0645\u0631 \u0628\u0646 \u0627\u0644\u062e\u0637\u0627\u0628",
+            "air_conditioning": "yes",
+            "brand": "Alain Afflelou",
+            "level": "1",
+            "name": "Alain Afflelou Arribat Center",
+            "opening_hours": "Mo-Sa 09:00-20:00",
+            "operator": "Alain Afflelou",
+            "payment:cash": "yes",
+            "payment:credit_cards": "yes",
+            "payment:mastercard": "yes",
+            "payment:visa": "yes",
+            "shop": "optician",
+            "stroller": "yes",
+            "website": "https://www.facebook.com/Alainafflelourabat",
+            "wheelchair": "yes"
+        }
+    },
+    {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                -6.8289252,
+                34.0182461
+            ]
+        },
+        "properties": {
+            "name": "Alami Optical Center",
+            "shop": "optician"
+        }
+    },
+    {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                -6.8499307,
+                34.0012328
+            ]
+        },
+        "properties": {
+            "name": "optical blue",
+            "shop": "optician"
+        }
+    }
+]}

@@ -1,12 +1,12 @@
 import express, { query } from 'express'
 import pg from "pg";
 import cors from 'cors';
-import clinics from './data/clinics.json' assert { type: "json" };
-import dentists from './data/dentists.json' assert { type: "json" };
-import laboratories from './data/laboratories.json' assert { type: "json" };
-import transfusion from './data/transfusion.json' assert { type: "json" };
-import pharmacies from './data/pharmacies.json' assert { type: "json" };
-import opticians from './data/opticiens.json' assert { type: "json" };
+import clinics from './data2/clinics2.json' assert { type: "json" };
+import dentists from './data2/dentists2.json' assert { type: "json" };
+import laboratories from './data2/laboratories2.json' assert { type: "json" };
+import transfusion from './data2/transfusion2.json' assert { type: "json" };
+import pharmacies from './data2/pharmacies2.json' assert { type: "json" };
+import opticians from './data2/opticiens2.json' assert { type: "json" };
 
 const connectionString = process.env.DATABASE_URL
 const pool = new pg.Pool({
@@ -22,6 +22,12 @@ const mypharmacies = pharmacies.features
 const mylaboratories = laboratories.features
 const mytranfusion = transfusion.features
 var search_result = []
+
+app.post('/addRating', async (req, res)=>{
+    const {rating, table, id} = req.query
+    console.log(rating, table, id)
+    await pool.query(`UPDATE ${table} SET rating = ${rating} WHERE id = ${id}`)
+})
 
 app.get('/api/get/searchbyfilter',async (req, res) => {
     const {search_query, table} = req.query;
